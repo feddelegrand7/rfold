@@ -36,7 +36,7 @@
     )
   }
 
-  folders_to_be_ignored <- c("R", folders_to_ignore)
+  folders_to_be_ignored <- c("R", "tests", "tests/testthat",folders_to_ignore)
 
   r_files_not_in_r_dir_df <- tmp_df[!tmp_df$dir_name %in% folders_to_be_ignored, ]
 
@@ -82,6 +82,14 @@ fold <- function(folders_to_ignore = NULL) {
   if (!is.null(folders_to_ignore)) {
     if (any(grepl("/", folders_to_ignore))) {
       stop("Please provide plain folder names (without the backslash /)")
+    }
+
+    dir_exist <- dir.exists(folders_to_ignore)
+
+    if (!any(dir_exist)) {
+      dir_no_exist <- folders_to_ignore[dir_exist]
+      stop("The following directories do not exist. Can't ignore them: ", dir_no_exist)
+
     }
   }
 
