@@ -55,16 +55,20 @@ structure:
     #> |   \-- main.R
     #> +-- README.md
     #> +-- README.Rmd
-    #> \-- services
-    #>     \-- api
-    #>         \-- api_functions.R
+    #> +-- services
+    #> |   \-- api
+    #> |       \-- api_functions.R
+    #> \-- tests
+    #>     +-- testthat
+    #>     |   \-- test-main.R
+    #>     \-- testthat.R
 
 Running `fold::fold()`, all the external (external to the `R` folder)
 `.R` scripts will be moved within the `R` folder:
 
 ``` r
 fold::fold()
-#> v Setting active project to 'C:/Users/Administrateur/Desktop/fold'i Copying the following R files into the R folder: helper_functions/utilities.R, helper_functions/wrappers.R, services/api/api_functions.R
+#> v Setting active project to 'C:/Users/Administrateur/Desktop/fold'v Adding '^helper_functions$', '^services$', '^api$' to '.Rbuildignore'i Copying the following R files into the R folder: helper_functions/utilities.R, helper_functions/wrappers.R, services/api/api_functions.R
 #> v Success
 ```
 
@@ -89,9 +93,13 @@ As such, I’ll get now the following structure:
     #> |   \-- wrappers.R
     #> +-- README.md
     #> +-- README.Rmd
-    #> \-- services
-    #>     \-- api
-    #>         \-- api_functions.R
+    #> +-- services
+    #> |   \-- api
+    #> |       \-- api_functions.R
+    #> \-- tests
+    #>     +-- testthat
+    #>     |   \-- test-main.R
+    #>     \-- testthat.R
 
 Note `devtools::build()` and `devtools::document()` will only consider
 the scripts available within your `R` folder.
