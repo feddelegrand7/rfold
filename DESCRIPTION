@@ -1,7 +1,7 @@
 Package: fold
 Type: Package
 Title: Working with many R folders within an R package
-Version: 0.2.1
+Version: 0.0.1
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
 Description:
@@ -9,7 +9,6 @@ Description:
     the R folder while making additional checks.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Imports: 
     cli (>= 3.6.1),
     fs (>= 1.5.0),
