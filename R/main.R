@@ -84,6 +84,14 @@ fold <- function(
     script_name_prefix = "FOLD_"
 ) {
 
+  if (length(script_name_prefix) > 1) {
+    stop("script_name_prefix must be of length 1")
+  }
+
+  if (is.null(script_name_prefix)) {
+    script_name_prefix <- ""
+  }
+
   if (!is.null(folders_to_ignore)) {
     if (any(grepl("/", folders_to_ignore))) {
       stop("Please provide plain folder names (without the backslash /)")
@@ -113,7 +121,7 @@ fold <- function(
   r_files_string <- paste(toString(r_files), collapse = ", ")
 
   cli::cli_alert_info(
-    "Copying the following R files into the R folder: {r_files_string}"
+    "Copying the following R files with prefix '{script_name_prefix}' into the R folder: {r_files_string}"
   )
 
   file_names <- basename(r_files)
