@@ -74,10 +74,15 @@
 #' @param folders_to_ignore a string vector of plain names folders that should be ignored
 #' where transferring .R files into the main R folder (for example a dev folder). Defaults to NULL
 #'
+#' @param script_name_prefix characters string of length 1 that will be appended to the start of the .R scripts when transferring them to the R folder. Defaults to 'FOLD_', set it to NULL for no appending
+#'
 #' @export
 #'
 
-fold <- function(folders_to_ignore = NULL) {
+fold <- function(
+    folders_to_ignore = NULL,
+    script_name_prefix = "FOLD_"
+) {
 
   if (!is.null(folders_to_ignore)) {
     if (any(grepl("/", folders_to_ignore))) {
@@ -111,9 +116,13 @@ fold <- function(folders_to_ignore = NULL) {
     "Copying the following R files into the R folder: {r_files_string}"
   )
 
+  file_names <- basename(r_files)
+
+  new_file_names <- paste0(script_name_prefix, file_names)
+
   fs::file_copy(
     path = r_files,
-    new_path = here::here("R"),
+    new_path = here::here("R", new_file_names),
     overwrite = TRUE
   )
 

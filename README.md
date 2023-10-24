@@ -52,6 +52,9 @@ structure:
     #> |   \-- fold.Rd
     #> +-- NAMESPACE
     #> +-- R
+    #> |   +-- FOLD_api_functions.R
+    #> |   +-- FOLD_utilities.R
+    #> |   +-- FOLD_wrappers.R
     #> |   \-- main.R
     #> +-- README.md
     #> +-- README.Rmd
@@ -68,7 +71,7 @@ Running `fold::fold()`, all the external (external to the `R` folder)
 
 ``` r
 fold::fold()
-#> v Setting active project to 'C:/Users/Administrateur/Desktop/fold'v Adding '^helper_functions$', '^services$', '^api$' to '.Rbuildignore'i Copying the following R files into the R folder: helper_functions/utilities.R, helper_functions/wrappers.R, services/api/api_functions.R
+#> v Setting active project to 'C:/Users/Administrateur/Desktop/fold'i Copying the following R files into the R folder: helper_functions/utilities.R, helper_functions/wrappers.R, services/api/api_functions.R
 #> v Success
 ```
 
@@ -87,10 +90,10 @@ As such, I’ll get now the following structure:
     #> |   \-- fold.Rd
     #> +-- NAMESPACE
     #> +-- R
-    #> |   +-- api_functions.R
-    #> |   +-- main.R
-    #> |   +-- utilities.R
-    #> |   \-- wrappers.R
+    #> |   +-- FOLD_api_functions.R
+    #> |   +-- FOLD_utilities.R
+    #> |   +-- FOLD_wrappers.R
+    #> |   \-- main.R
     #> +-- README.md
     #> +-- README.Rmd
     #> +-- services
@@ -101,8 +104,17 @@ As such, I’ll get now the following structure:
     #>     |   \-- test-main.R
     #>     \-- testthat.R
 
-Note `devtools::build()` and `devtools::document()` will only consider
-the scripts available within your `R` folder.
+Notice, that script names that will be transferred to the `R` folder
+have their name prefixed with the character `FOLD_`. You can tweak this
+feature or deactivate it using the `script_name_suffix` parameter of the
+`fold()` function.
+
+There’s another parameter available, called `folders_to_ignore` which
+allows you to ignore certain directories (for example `dev` directory)
+when running the `fold` function.
+
+Note also that `devtools::build()` and `devtools::document()` will only
+consider the scripts available within your `R` folder.
 
 ## Code of Conduct
 

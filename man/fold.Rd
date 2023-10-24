@@ -4,11 +4,13 @@
 \alias{fold}
 \title{Transfer .R files into the R directory}
 \usage{
-fold(folders_to_ignore = NULL)
+fold(folders_to_ignore = NULL, script_name_prefix = "FOLD_")
 }
 \arguments{
 \item{folders_to_ignore}{a string vector of plain names folders that should be ignored
 where transferring .R files into the main R folder (for example a dev folder). Defaults to NULL}
+
+\item{script_name_prefix}{characters string of length 1 that will be appended to the start of the .R scripts when transferring them to the R folder. Defaults to 'FOLD_', set it to NULL for no appending}
 }
 \value{
 called for the side effect of transferring all R files
