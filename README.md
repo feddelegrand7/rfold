@@ -69,7 +69,7 @@ Running `fold::fold()`, all the external (external to the `R` folder)
 
 ``` r
 fold::fold()
-#> v Setting active project to 'C:/Users/Administrateur/Desktop/fold'v Adding '^helper_functions$', '^services$', '^api$' to '.Rbuildignore'i Copying the following R files with prefix 'FOLD_' into the R folder: helper_functions/utilities.R, helper_functions/wrappers.R, services/api/api_functions.R
+#> v Setting active project to 'C:/Users/Administrateur/Desktop/fold'i Copying the following R files with prefix 'DO_NOT_EDIT_' into the R folder: helper_functions/utilities.R, helper_functions/wrappers.R, services/api/api_functions.R
 #> v Success
 ```
 
@@ -89,9 +89,9 @@ As such, I’ll get now the following structure:
     #> +-- NAMESPACE
     #> +-- NEWS.md
     #> +-- R
-    #> |   +-- FOLD_api_functions.R
-    #> |   +-- FOLD_utilities.R
-    #> |   +-- FOLD_wrappers.R
+    #> |   +-- DO_NOT_EDIT_api_functions.R
+    #> |   +-- DO_NOT_EDIT_utilities.R
+    #> |   +-- DO_NOT_EDIT_wrappers.R
     #> |   \-- main.R
     #> +-- README.md
     #> +-- README.Rmd
@@ -104,9 +104,9 @@ As such, I’ll get now the following structure:
     #>     \-- testthat.R
 
 Notice, that script names that will be transferred to the `R` folder
-have their name prefixed with the character `FOLD_`. You can tweak this
-feature or deactivate it using the `script_name_suffix` parameter of the
-`fold()` function.
+have their name prefixed with the character `DO_NOT_EDIT`. You can tweak
+this feature or deactivate it using the `script_name_suffix` parameter
+of the `fold()` function.
 
 There’s another parameter available, called `folders_to_ignore` which
 allows you to ignore certain directories (for example `dev` directory)

@@ -74,14 +74,14 @@
 #' @param folders_to_ignore a string vector of plain names folders that should be ignored
 #' where transferring .R files into the main R folder (for example a dev folder). Defaults to NULL
 #'
-#' @param script_name_prefix characters string of length 1 that will be appended to the start of the .R scripts when transferring them to the R folder. Defaults to 'FOLD_', set it to NULL for no appending
+#' @param script_name_prefix characters string of length 1 that will be appended to the start of the .R scripts when transferring them to the R folder. Defaults to 'DO_NOT_EDIT', set it to NULL for no appending
 #'
 #' @export
 #'
 
 fold <- function(
     folders_to_ignore = NULL,
-    script_name_prefix = "FOLD_"
+    script_name_prefix = "DO_NOT_EDIT_"
 ) {
 
   if (length(script_name_prefix) > 1) {

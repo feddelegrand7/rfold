@@ -73,7 +73,7 @@ As such, I'll get now the following structure:
 fs::dir_tree()
 ```
 
-Notice, that script names that will be transferred to the `R` folder have their name prefixed with the character `FOLD_`. You can tweak this feature or deactivate it using the `script_name_suffix` parameter of the `fold()` function.
+Notice, that script names that will be transferred to the `R` folder have their name prefixed with the character `DO_NOT_EDIT`. You can tweak this feature or deactivate it using the `script_name_suffix` parameter of the `fold()` function.
 
 There's another parameter available, called `folders_to_ignore` which allows you to ignore certain directories (for example `dev` directory) when running the `fold` function.
 
@@ -84,9 +84,9 @@ Note also that `devtools::build()` and `devtools::document()` will only consider
 fs::dir_delete("helper_functions")
 fs::dir_delete("services")
 
-fs::file_delete("R/FOLD_utilities.R")
-fs::file_delete("R/FOLD_wrappers.R")
-fs::file_delete("R/FOLD_api_functions.R")
+fs::file_delete("R/DO_NOT_EDIT_utilities.R")
+fs::file_delete("R/DO_NOT_EDIT_wrappers.R")
+fs::file_delete("R/DO_NOT_EDIT_api_functions.R")
 ```
 
 
