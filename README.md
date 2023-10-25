@@ -51,10 +51,8 @@ structure:
     #> +-- man
     #> |   \-- fold.Rd
     #> +-- NAMESPACE
+    #> +-- NEWS.md
     #> +-- R
-    #> |   +-- FOLD_api_functions.R
-    #> |   +-- FOLD_utilities.R
-    #> |   +-- FOLD_wrappers.R
     #> |   \-- main.R
     #> +-- README.md
     #> +-- README.Rmd
@@ -71,7 +69,7 @@ Running `fold::fold()`, all the external (external to the `R` folder)
 
 ``` r
 fold::fold()
-#> v Setting active project to 'C:/Users/Administrateur/Desktop/fold'i Copying the following R files into the R folder: helper_functions/utilities.R, helper_functions/wrappers.R, services/api/api_functions.R
+#> v Setting active project to 'C:/Users/Administrateur/Desktop/fold'v Adding '^helper_functions$', '^services$', '^api$' to '.Rbuildignore'i Copying the following R files with prefix 'FOLD_' into the R folder: helper_functions/utilities.R, helper_functions/wrappers.R, services/api/api_functions.R
 #> v Success
 ```
 
@@ -89,6 +87,7 @@ As such, I’ll get now the following structure:
     #> +-- man
     #> |   \-- fold.Rd
     #> +-- NAMESPACE
+    #> +-- NEWS.md
     #> +-- R
     #> |   +-- FOLD_api_functions.R
     #> |   +-- FOLD_utilities.R
