@@ -16,7 +16,7 @@
 
   all_r_files <- fs::dir_ls(
     path = ".",
-    regexp = ".R$|.r$",
+    regexp = "\\.R$|\\.r$",
     recurse = TRUE
   )
 
