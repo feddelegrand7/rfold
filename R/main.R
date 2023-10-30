@@ -42,6 +42,10 @@
 
   r_files_not_in_r_dir <- r_files_not_in_r_dir_df$r_files
 
+  r_check_folder <- grepl(".Rcheck/", x = r_files_not_in_r_dir)
+
+  r_files_not_in_r_dir <- r_files_not_in_r_dir[!r_check_folder]
+
   if (length(r_files_not_in_r_dir) == 0) {
     cli::cli_alert_warning(
       "No R files available outside of the R directory, nothing to do"
@@ -93,10 +97,6 @@ fold <- function(
   }
 
   if (!is.null(folders_to_ignore)) {
-    if (any(grepl("/", folders_to_ignore))) {
-      stop("Please provide plain folder names (without the backslash /)")
-    }
-
     dir_exist <- dir.exists(folders_to_ignore)
 
     if (!any(dir_exist)) {
