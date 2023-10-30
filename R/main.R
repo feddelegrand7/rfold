@@ -16,14 +16,15 @@
 
   all_r_files <- fs::dir_ls(
     path = ".",
-    regexp = ".R$|.r$",
+    regexp = "\\.R$|\\.r$",
     recurse = TRUE
   )
 
   tmp_df <- data.frame(
     r_files = all_r_files,
     dir_name = dirname(all_r_files),
-    row.names = NULL
+    row.names = NULL, 
+    stringsAsFactors = FALSE
   )
 
   r_files_without_dir <- tmp_df[tmp_df$dir_name == ".", ]
