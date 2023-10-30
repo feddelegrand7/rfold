@@ -1,6 +1,6 @@
-Package: fold
+Package: rfold
 Type: Package
-Title: Working with many R folders within an R package
+Title: Working with many R Folders Within an R Package
 Version: 0.1.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>

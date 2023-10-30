@@ -3,3 +3,8 @@
 ^README\.Rmd$
 ^LICENSE\.md$
 ^CODE_OF_CONDUCT\.md$
+^cran-comments\.md$
+^helper_functions$
+^services$
+^api$
+^CRAN-RELEASE$

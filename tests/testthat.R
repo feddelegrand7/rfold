@@ -1,4 +1,4 @@
 library(testthat)
-library(fold)
+library(rfold)
 
-test_check("fold")
+test_check("rfold")
