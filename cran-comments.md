@@ -8,4 +8,7 @@ Duration: 15.5s
 
 0 errors v | 0 warnings v | 0 notes v
 
-- I've corrected the DESCRIPTION title.
+# Correcitions according to CRAN's team comments: 
+
+- Corrected the author field in DESCRIPTION 
+- Removed the usage of any function that modifies the structure of the package folder (functions were previously on the README.Rmd).
