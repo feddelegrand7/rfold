@@ -4,6 +4,7 @@
 # rfold
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/lazytest)](https://CRAN.R-project.org/package=rfold)
 <!-- badges: end -->
 
 The goal of the `rfold` package is to allow `R` developers to work with
