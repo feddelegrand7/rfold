@@ -5,6 +5,10 @@
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/rfold)](https://CRAN.R-project.org/package=rfold)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/rfold)](https://cran.r-project.org/package=rfold)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/rfold)](https://cran.r-project.org/package=rfold)
 <!-- badges: end -->
 
 The goal of the `rfold` package is to allow `R` developers to work with
