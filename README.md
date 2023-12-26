@@ -11,6 +11,8 @@ downloads](https://cranlogs.r-pkg.org/badges/rfold)](https://cran.r-project.org/
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/rfold)](https://cran.r-project.org/package=rfold)
 <!-- badges: end -->
 
+An introductory vide can be found [here](https://www.youtube.com/watch?v=q-GT7q0v_YA&ab_channel=RforPROD)
+
 The goal of the `rfold` package is to allow `R` developers to work with
 many `R` directories within an `R` package. A considerable limitation
 regarding `R` packages development, is that one cannot create other
