@@ -20,13 +20,15 @@ directories/sub directories (other than the `R` directory) and bind them
 to the package ecosystem.
 
 Using `rfold`, you can create as many directories/sub directories
-(**outside of your `R` directory**).
+(**outside of your `R` directory**). 
 
 The `rfold()` function will list all the `.R` scripts available outside
 of the `R` folder, assign their names to `.Rbuildignore` file and
 transfer them within the main `R` directory, giving you all the
 flexibility you need to organize your package into many
 directories/sub-directories.
+
+### **Important**: Note that the `rfold()` function by design and deliberatly will ignore the `test` folder. 
 
 ## Installation
 
