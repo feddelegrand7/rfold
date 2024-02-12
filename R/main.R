@@ -125,7 +125,8 @@
 
   if (type == "tests") {
    file_names <-  gsub(".R", "", file_names)
-   new_file_names <- paste0(file_names, "-", script_name_prefix, ".R")
+   file_names <-  gsub("test-", "", file_names)
+   new_file_names <- paste0("test-", script_name_prefix, file_names, ".R")
   }
 
   dir_to_consider <- "R"
