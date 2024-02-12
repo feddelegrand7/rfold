@@ -33,8 +33,6 @@ directories/sub-directories.
 
 ## Working with `test` files
 
-** The test functionality is not available on CRAN yet, please install the latest package version with Github if you want to experiment it **
-
 Using `rfold`, you can arrange your test file however you want, you can
 for example put your test and R scripts in one folder. To do so, you
 need to append the `test-` word to the name of your test files. For
