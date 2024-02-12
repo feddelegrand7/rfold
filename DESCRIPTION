@@ -1,7 +1,7 @@
 Package: rfold
 Type: Package
 Title: Working with many R Folders Within an R Package
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person(given = "Mohamed El Fodil",
            family = "Ihaddaden",
@@ -12,14 +12,15 @@ Description:
     the R folder while making additional checks.
 License: MIT + file LICENSE
 Encoding: UTF-8
+URL: https://github.com/feddelegrand7/rfold
+BugReports: https://github.com/feddelegrand7/rfold/issues
 Imports: 
     cli (>= 3.6.1),
     fs (>= 1.5.0),
+    glue,
     here (>= 1.0.1),
     usethis (>= 2.0.1)
 RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://github.com/feddelegrand7/rfold
-BugReports: https://github.com/feddelegrand7/rfold/issues

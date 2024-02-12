@@ -1,14 +1,7 @@
-## Test environments
-* local R installation, R 4.1.0
-* ubuntu 16.04 (on travis-ci), R 4.1.0
-* win-builder (devel)
-
--- R CMD check results -------------------------- rfold 0.1.0 ----
-Duration: 15.5s
+-- R CMD check results ---------------------------------- rfold 0.2.0 ----
+Duration: 14.9s
 
 0 errors v | 0 warnings v | 0 notes v
 
-# Correcitions according to CRAN's team comments: 
-
-- Corrected the author field in DESCRIPTION 
-- Removed the usage of any function that modifies the structure of the package folder (functions were previously on the README.Rmd).
+### New features: 
+* The user can now similarly to script files, refactor `test` files disposition. For example, one might want to put script files and test files within the same folder. By appending the `test-` word to an `R` script, `rfold` will recognise it as a test file and move it to the corresponding folder. Note that for now, `rfold` works with `testthat` only.
