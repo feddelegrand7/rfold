@@ -33,7 +33,7 @@ directories/sub-directories.
 
 ## Working with `test` files
 
-Using `rfold`, you can arrange your test file however you want, you can
+Using `rfold`, you can arrange your test file the way you want, you can
 for example put your test and R scripts in one folder. To do so, you
 need to append the `test-` word to the name of your test files. For
 example, `test-myapi.R`. This way `rfold` will recognize it as a test
